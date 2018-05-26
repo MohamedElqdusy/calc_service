@@ -1,0 +1,18 @@
+syntax = "proto3";
+package api;
+
+message args {
+  int64 arg1 = 1;
+  int64 arg2 = 2;
+}
+
+message result {
+  int64 value = 1;
+}
+
+service Calc {
+	rpc sum(args) returns (result) {}
+	rpc sub(args) returns (result) {}
+	rpc mul(args) returns (result) {}
+	rpc div(args) returns (result) {}		
+}
